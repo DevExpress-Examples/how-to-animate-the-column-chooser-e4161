@@ -1,0 +1,32 @@
+﻿<Window x:Class="ColumnChooserAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:dxcore="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys"
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:my="clr-namespace:ColumnChooserAnimation">
+    <Window.Resources>
+        <my:MyConverter x:Key="myConverter"/>
+    </Window.Resources>
+    <Grid>
+        <dxg:GridControl AutoPopulateColumns="True" Name="gridControl1">
+            <dxg:GridControl.Resources>
+                <Style TargetType="{x:Type dxg:ColumnChooserControl}">
+                    <Style.Triggers>
+                        <Trigger Property="IsVisible" Value="True">
+                            <Setter Property="Background" Value="{Binding Converter={StaticResource myConverter}}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </dxg:GridControl.Resources>
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="Col1"/>
+                <dxg:GridColumn FieldName="Col2"/>
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView Name="tableView1" ShowTotalSummary="True" />
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+    </Grid>
+</Window>
