@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/ColumnChooserAnimation/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/ColumnChooserAnimation/MainWindow.xaml.vb))
+* [MainWindow.xaml.cs](./CS/ColumnChooserAnimation/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/ColumnChooserAnimation/MainWindow.xaml.vb))
+* [MyConverter.cs](./CS/ColumnChooserAnimation/MyConverter.cs) (VB: [MyConverter.vb](./VB/ColumnChooserAnimation/MyConverter.vb))
+<!-- default file list end -->
 # How to animate the Column Chooser
 
 
